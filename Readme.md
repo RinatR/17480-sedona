@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ринат Раимов](https://up.htmlacademy.ru/adaptive/9/user/17480).
-* Наставник: `Неизвестно`.
+* Наставник: [Макс Пушкарев] (https://htmlacademy.ru/profile/id87167).
 
 ---
 
