@@ -3,36 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
-  <body>
+  <body class="page page--index">
     <header class="main-header">
-      <nav class="main-menu">
-        <a class="main-menu__item" href="#">Главная</a>
-        <a class="main-menu__item" href="#">Фото и видео</a>
-        <a class="main-menu__item" href="#">Форма отзывы</a>
-        <a class="main-menu__item" href="#">Htmlacademy</a>
-      </nav>
+      <ul class="main-menu">
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="index.html">Главная</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="photo.html">Фото и видео</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="form.html">Форма отзыва</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="http://www.htmlacademy.ru">Html academy</a>
+        </li>
+      </ul>
       <div class="logo">
-        <img src="http://placehold.it/102x83" alt="Logo" width="102" height="83">
+        <img src="img/logo-sedona-mobile.svg" alt="Logo" width="102" height="83">
       </div>
-      <div class="hamburger"></div>
-      <div class="promo">
-        <img class="promo__image" src="http://placehold.it/282x214" alt="Promo Image">
-      </div>
+      <a class="main-header__hamburger" href="#"></a>
     </header>
     <main class="main-content">
+      <div class="main-content__promo">
+      </div>
       <section class="features">
-        <header class="section-header">
-          <h1 class="section-header__title">Седона, небольшой городок в Аризоне, заслуживающий большего</h1>
+        <div class="section-header">
+          <h1 class="section-header__title">Седона - небольшой городок в Аризоне, заслуживающий большего</h1>
           <p class="section-header__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
-        </header>
+        </div>
         <div class="feature-item">
-          <div class="feature-item__content">
+          <div class="feature-item__content feature-item__content--first">
             <h2 class="feature-item__title">Настоящий городок</h2>
             <span class="feature-item__number">№1</span>
             <p class="feature-item__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-          <img class="feature-item__image" src="http://placehold.it/320x260" alt="feature-item Image" width="320" height="260">
+          <img class="feature-item__image" src="img/photo-city@1x.jpg" width="320" height="260">
         </div>
         <div class="services">
           <div class="services__item">
@@ -41,7 +50,7 @@
           </div>
           <div class="services__item">
             <h2 class="services__title">Сувениры</h2>
-            <p class="services__text">Не тольк китайского, но и местного производства!</p>
+            <p class="services__text">Не только китайского, но и местного производства!</p>
           </div>
           <div class="services__item">
             <h2 class="services__title">Еда</h2>
@@ -54,7 +63,7 @@
             <span class="feature-item__number">№2</span>
             <p class="feature-item__text">Да, по нему можно пройтись, если вы осмелитесь, конечно!</p>
           </div>
-          <img class="feature-item__image" src="http://placehold.it/320x260" alt="feature-item Image" width="320" height="260">
+          <img class="feature-item__image" src="img/photo-4-mobile@1x.jpg" alt="feature-item Image" width="320" height="260">
         </div>
         <div class="feature-item">
           <div class="feature-item__content feature-item__content--dark">
@@ -79,22 +88,22 @@
         </div>
       </section>
       <section class="booking">
-        <header class="section-header">
+        <div class="section-header">
           <h1 class="section-header__title">Заинтересовались?</h1>
           <p class="section-header__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        </header>
+        </div>
         <a class="btn booking__btn" href="#">Найти гостиницу</a>
         <div class="map">
-          <img class="map__image" src="http://placehold.it/320x350" alt="Карта" width="320" height="350">
+          <div class="map__image"> </div>
         </div>
       </section>
     </main>
     <footer class="main-footer">
-      <span class="hashtag">#visitsedona</span>
+      <div class="hashtag">#visitsedona</div>
       <div class="socials">
-        <a class="social socials__twitter" href="#"></a>
-        <a class="social socials__facebook" href="#"></a>
-        <a class="social socials__youtube" href="#"></a>
+        <a class="socials__icon socials__icon--twitter" href="#"></a>
+        <a class="socials__icon socials__icon--facebook" href="#"></a>
+        <a class="socials__icon socials__icon--youtube" href="#"></a>
       </div>
       <div class="copyright">
         <span class="copyright__text">Разработано</span>
