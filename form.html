@@ -3,34 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy:Отзыв</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
-<body>
+<body class="page page--form">
   <header class="main-header">
-    <nav class="main-menu">
-      <a class="main-menu__item" href="#">Главная</a>
-      <a class="main-menu__item" href="#">Фото и видео</a>
-      <a class="main-menu__item" href="#">Форма отзывы</a>
-      <a class="main-menu__item" href="#">Htmlacademy</a>
-    </nav>
+    <ul class="main-menu">
+      <li class="main-menu__item">
+        <a class="main-menu__link" href="index.html">Главная</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link" href="photo.html">Фото и видео</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link" href="form.html">Форма отзыва</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link" href="http://www.htmlacademy.ru">Html academy</a>
+      </li>
+    </ul>
     <div class="logo">
-      <img src="http://placehold.it/102x83" alt="Logo" width="102" height="83">
+      <img src="img/logo-sedona-mobile.svg" alt="Logo" width="102" height="83">
     </div>
-    <div class="hamburger"></div>
-    <div class="promo">
-      <img class="promo__image" src="http://placehold.it/229x39" alt="Promo Image" width="229" height="39">
-    </div>
+    <a class="main-menu__hamburger" href="#"></a>
+  </header>
   <main class="main-content">
+    <div class="main-content__promo">
+    </div>
     <section class="feedback">
-      <header class="section-header">
+      <div class="section-header">
         <h1 class="section-header__title">Оставьте свой отзыв</h1>
         <p class="section-header__text">
           Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами
           достопримечательностях
         </p>
-      </header>
+      </div>
       <form class="feedback-form" action="/echo" method="post">
-        <fieldset>
-          <legend class="feedback-form__title">Представьтесь:</legend>
+        <fieldset class="feedback-form__block">
+          <h2 class="feedback-form__title">Представьтесь:</h2>
           <div class="feedback-form__control">
             <label class="feedback-form__label" for="name">Имя*:</label>
             <input class="feedback-form__input" type="text" id="name" required placeholder="Иван">
@@ -44,8 +54,8 @@
             <input class="feedback-form__input" type="text" id="patronymic" placeholder="Иванович">
           </div>
         </fieldset>
-        <fieldset>
-          <legend class="feedback-form__title">Контактная информация:</legend>
+        <fieldset class="feedback-form__block">
+          <h2 class="feedback-form__title">Контактная информация:</h2>
           <div class="feedback-form__control">
             <label class="feedback-form__label feedback-form__label--not-inline" for="phone">Контактный телефон*:</label>
             <input class="feedback-form__input" type="tel" id="phone" required placeholder="Введите телефон">
@@ -56,23 +66,23 @@
             <input class="feedback-form__input" type="email" id="email" required placeholder="Введите email">
           </div>
         </fieldset>
-        <fieldset>
-          <legend class="feedback-form__title">Ваше общее впечатление:</legend>
+        <fieldset class="feedback-form__block">
+          <h2 class="feedback-form__title">Ваше общее впечатление:</h2>
           <div class="feedback-form__control">
             <input class="feedback-form__radio" type="radio" id="positive" value="negative" name="impression" checked>
-            <label class="feedback-form__label" for="positive">Скорее положительно</label>
+            <label class="feedback-form__label" for="positive">Скорее положительное</label>
           </div>
           <div class="feedback-form__control">
             <input class="feedback-form__radio" type="radio" id="negative" value="positive" name="impression">
-            <label class="feedback-form__label" for="negative">Скорее отрицательон</label>
+            <label class="feedback-form__label" for="negative">Скорее отрицательное</label>
           </div>
           <div class="feedback-form__control">
             <input class="feedback-form__radio" type="radio" id="hard" value="hardtoanswer" name="impression">
             <label class="feedback-form__label" for="hard">Затрудняюсь ответить</label>
           </div>
         </fieldset>
-        <fieldset>
-          <legend class="feedback-form__title">Посещенные достопримечательности</legend>
+        <fieldset class="feedback-form__block">
+          <h2 class="feedback-form__title">Посещенные достопримечательности:</h2>
           <div class="feedback-form__control">
             <input class="feedback-form__checkbox" type="checkbox" name="devil" id="devil" checked>
             <label class="feedback-form__label" for="devil">Мост дьявола</label>
@@ -90,8 +100,8 @@
             <label class="feedback-form__label" for="rocks">Красные скалы</label>
           </div>
         </fieldset>
-        <fieldset>
-          <legend class="feedback-form__title">Опишите свои эмоции:</legend>
+        <fieldset class="feedback-form__block">
+          <h2 class="feedback-form__title">Опишите свои эмоции:</h2>
           <textarea class="feedback-form__textarea" name="descripton" id="descripton" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <input class="btn feedback-form__btn" type="submit" value="Отправить отзыв">
@@ -99,11 +109,11 @@
     </section>
   </main>
   <footer class="main-footer">
-    <span class="hashtag">#visitsedona</span>
+    <div class="hashtag">#visitsedona</div>
     <div class="socials">
-      <a class="social socials__twitter" href="#"></a>
-      <a class="social socials__facebook" href="#"></a>
-      <a class="social socials__youtube" href="#"></a>
+      <a class="socials__icon socials__icon--twitter" href="#"></a>
+      <a class="socials__icon socials__icon--facebook" href="#"></a>
+      <a class="socials__icon socials__icon--youtube" href="#"></a>
     </div>
     <div class="copyright">
       <span class="copyright__text">Разработано</span>
