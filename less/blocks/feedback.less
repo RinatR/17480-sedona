@@ -1,7 +1,20 @@
 .feedback {
+  .container();
   margin-bottom: 78px;
 
   .section-header {
     margin-bottom: 22px;
+  }
+}
+
+@media @tablet-width {
+  .feedback {
+    .container("tablet");
+  }
+}
+
+@media @desktop-width {
+  .feedback {
+    .container();
   }
 }
