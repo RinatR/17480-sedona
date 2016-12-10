@@ -1,5 +1,23 @@
 .photos {
+  .container();
+  margin-bottom: 39px;
+
   .section-header {
     margin-bottom: 33px;
+  }
+}
+
+@media @tablet-width {
+
+  .photos {
+    .container("tablet");
+    .clearfix();
+    margin-bottom: 69px;
+  }
+}
+
+@media @desktop-width {
+  .photos {
+    .container();
   }
 }
