@@ -1,4 +1,5 @@
 .booking {
+  .container();
   padding-top: 33px;
   padding-bottom: 49px;
 
@@ -10,4 +11,20 @@
     margin-bottom: 33px;
     font-size: 21px;
   }
+}
+
+@media @tablet-width {
+
+  .booking {
+    .container("tablet");
+    padding: 55px 0;
+  }
+  .booking__btn {
+    width: 458px;
+    margin: 0 auto;
+  }
+}
+
+@media @desktop-width {
+
 }
