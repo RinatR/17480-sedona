@@ -1,8 +1,18 @@
 .video {
-  padding-top: 39px;
   margin-bottom: 80px;
 
   .section-header {
+    .container();
     margin-bottom: 40px;
+  }
+}
+
+@media @tablet-width {
+  .video {
+    .container("tablet");
+
+    .section-header {
+      width: 100%;
+    }
   }
 }

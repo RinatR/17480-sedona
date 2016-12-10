@@ -1,3 +1,22 @@
 .features {
   text-align: center;
+
+  .section-header {
+    .container();
+  }
+}
+
+.features__wrapper {
+  .clearfix();
+}
+
+@media @tablet-width {
+  .features {
+    .container();
+
+    .section-header {
+      .container("tablet");
+      margin-bottom: 55px;
+    }
+  }
 }
