@@ -2,17 +2,24 @@
   margin-bottom: 80px;
 
   .section-header {
-    .container();
     margin-bottom: 40px;
   }
 }
 
 @media @tablet-width {
   .video {
-    // .container("tablet");
-
+     .container("tablet");
     .section-header {
-      width: 100%;
+      margin-bottom: 78px;
     }
+  }
+}
+
+@media @desktop-width {
+  .video {
+    .container();
+    padding: 0 200px;
+    box-sizing: border-box;
+
   }
 }

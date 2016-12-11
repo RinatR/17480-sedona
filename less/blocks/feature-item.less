@@ -10,15 +10,16 @@
 
   &--dark {
 
-    &:not(:last-of-type):after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 20px;
-      right: 20px;
-      height: 1px;
-      background-color: #d6d6d6;
-    }
+    // &:not(:last-of-type):after {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 20px;
+    //   right: 20px;
+    //   height: 1px;
+    //   background-color: #d6d6d6;
+    // }
+    border-bottom: 1px solid #d6d6d6;
 
     .feature-item__content {
       background-color: @bg-color-gray;
@@ -72,10 +73,15 @@
         padding: 50px;
       }
 
-      &:after {
-        background-color: transparent;
-      }
+      // &:after {
+      //   background-color: transparent;
+      // }
     }
+  }
+
+  .feature-item--reverse {
+    display: flex;
+    flex-direction: row-reverse;
   }
 
   .feature-item__content {
@@ -96,9 +102,9 @@
     }
 
     &--dark {
-      &:after {
-        background-color: transparent;
-      }
+      // &:after {
+      //   background-color: transparent;
+      // }
     }
   }
 

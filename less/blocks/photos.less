@@ -9,8 +9,32 @@
 @media @tablet-width {
 
   .photos {
+    .container("tablet");
     margin-bottom: 69px;
   }
+
+  .photos__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
+
+@media @desktop-width {
+  .photos {
+    .container();
+    padding: 0;
+  }
+
+  .photos__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+
+
+
 
 

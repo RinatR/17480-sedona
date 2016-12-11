@@ -1,0 +1,36 @@
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 0;
+}
+
+.main-footer__hashtag {
+  margin-bottom: 23px;
+  font-size: 21px;
+  line-height: @line-height-main;
+  font-weight: bold;
+}
+
+.main-footer__copyright {
+  margin-bottom: 23px;
+}
+
+@media @tablet-width {
+
+  .main-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-footer__hashtag,
+  .main-footer__copyright {
+    margin-bottom: 0;
+  }
+}
+
+@media @desktop-width {
+
+}
+
