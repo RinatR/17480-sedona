@@ -45,8 +45,6 @@
 
     .feedback-form__label {
       margin-bottom: 8px;
-      font-size: 14px;
-      font-weight: normal;
     }
   }
 
@@ -55,6 +53,13 @@
     .feedback-form__control {
       justify-content: flex-start;
       align-items: center;
+    }
+
+    .feedback-form__label {
+      font-size: @font-size-main;
+      line-height: @line-height-main;
+      font-weight: bold;
+      text-transform: none;
     }
   }
 }
@@ -90,8 +95,10 @@
 
 .feedback-form__input {
   width: 224px;
-  padding: 18px 22px;
+  padding: 16px 22px;
   // margin-left: 14px;
+  font-size: @font-size-main;
+  line-height: @line-height-main;
   font-weight: bold;
   color: @text-color-main;
   text-align: left;
@@ -102,19 +109,19 @@
 }
 
 .feedback-form__input-addon {
-  width: 56px;
-  background-color: gray;
+  width: 58px;
+  background-color: #e6e6e6;
 }
 
 .feedback-form__label {
   font-size: @font-size-secondary;
   line-height: @line-height-main;
-  font-weight: bold;
+
 }
 
 .feedback-form__error-message {
   font-size: @font-size-secondary;
-  line-height: @line-height-secondary;
+  line-height: @line-height-main;
   text-transform: none;
   color: @text-color-error;
 }
@@ -135,18 +142,22 @@
 
 .feedback-form__btn {
   width: 280px;
+  padding: 21px 0;
   border: none;
+  font-weight: bold;
 }
 
 .feedback-form__legend {
   display: none;
+  font-size: @font-size-secondary;
+  line-height: @line-height-main;
 }
 
 @media @tablet-width {
   .feedback-form {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   .feedback-form__block {
@@ -207,18 +218,60 @@
     }
   }
 
+  .feedback-form__title {
+    font-size: 21px;
+    line-height: @line-height-main;
+  }
+
   .feedback-form__btn {
+    width: 324px;
     margin: 0;
+
   }
 
   .feedback-form__legend {
     display: block;
     align-self: center;
-    margin-left: auto;
+  }
+}
+
+@media @desktop-width {
+  .feedback-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
-  .feedback-form__error-message {
-    order: 0;
+  .feedback-form__block {
+    &:nth-of-type(2) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &:nth-of-type(4) {
+      flex-direction: column;
+
+      .feedback-form__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .feedback-form__control {
+        width: 192px;
+        margin-bottom: 0;
+      }
+
+
+    }
+
+
   }
 
+  .feedback-form__legend {
+    display: block;
+    align-self: center;
+  }
 }

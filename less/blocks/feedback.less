@@ -6,6 +6,39 @@
   }
 }
 
+.feedback__popup {
+  display: none;
+  width: 400px;
+  padding: 61px;
+  text-align: center;
+  background-color: @bg-color-main;
+  border: 1px solid;
+  box-sizing: border-box;
+
+  &--success {
+    width: 100%;
+    padding: 0;
+
+    .feedback__popup-content {
+      padding: 64px 112px;
+    }
+
+    .feedback__popup-footer {
+      padding: 44px 91px;
+      background-color: @body-bg-color
+    }
+
+    .feedback__popup-text {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.feedback__popup-title,
+.feedback__popup-text {
+  margin-bottom: 39px;
+}
+
 @media @tablet-width {
   .feedback {
     .container("tablet");
@@ -15,7 +48,7 @@
 
 @media @desktop-width {
   .feedback {
-    .container();
+    .container("desktop");
     padding: 0;
   }
 }
