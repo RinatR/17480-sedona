@@ -2,21 +2,18 @@
   text-align: center;
 
   .section-header {
-    .container();
+    margin-bottom: 17px;
   }
 }
 
 .features__wrapper {
-  .clearfix();
+  display: flex;
+  flex-direction: column;
 }
 
-@media @tablet-width {
-  .features {
-    .container();
 
-    .section-header {
-      .container("tablet");
-      margin-bottom: 55px;
-    }
+@media @tablet-width {
+  .features__wrapper {
+    flex-direction: row;
   }
 }

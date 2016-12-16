@@ -7,133 +7,145 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
-<body class="page page--photo">
-  <header class="main-header">
-    <ul class="main-menu">
-      <li class="main-menu__item">
-        <a class="main-menu__link" href="index.html">Главная</a>
-      </li>
-      <li class="main-menu__item">
-        <a class="main-menu__link" href="photo.html">Фото и видео</a>
-      </li>
-      <li class="main-menu__item">
-        <a class="main-menu__link" href="form.html">Форма отзыва</a>
-      </li>
-      <li class="main-menu__item">
-        <a class="main-menu__link" href="http://www.htmlacademy.ru">Html academy</a>
-      </li>
-    </ul>
-    <div class="logo">
-      <img src="img/logo-sedona-mobile.svg" alt="Logo" width="102" height="83">
-    </div>
-    <div class="main-header__inner">
-      <a class="main-header__hamburger" href="#">hamburger</a>
-    </div>
-  </header>
-  <main class="main-content">
-    <div class="main-content__promo">
-    </div>
-    <section class="photos">
-      <div class="section-header">
-        <h1 class="section-header__title">Фото и видео</h1>
-        <p class="section-header__text">Не можете решиться на путешествие из-за курса?
-        Фотографии помогут вам забыть о политике и экономике.</p>
+<body>
+  <div class="page-wrapper">
+    <header class="main-header">
+      <ul class="main-menu">
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="index.html">Главная</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="photo.html">Фото и видео</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="form.html">Форма отзыва</a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="http://www.htmlacademy.ru">Html academy</a>
+        </li>
+      </ul>
+      <div class="logo">
+        <img src="img/logo-sedona-mobile.svg" alt="Logo" width="102" height="83">
       </div>
-      <div class="photos__wrapper">
-        <article class="photo-item .photo-item--large">
-          <a class="photo-item__image" href="#">
+      <div class="main-header__inner">
+        <a class="main-header__toggle" href="#"></a>
+      </div>
+    </header>
+    <main class="main-content">
+      <div class="main-content__promo">
+        <img src="img/text-sedona.svg" alt="Промо">
+      </div>
+      <section class="photos">
+        <div class="section-header">
+          <h1 class="section-header__title">Фото и видео</h1>
+          <p class="section-header__text">Не можете решиться на путешествие из-за курса?
+          Фотографии помогут вам забыть о политике и экономике.</p>
+        </div>
+        <div class="photos__wrapper">
+          <article class="photo-item .photo-item--large">
+            <a class="photo-item__image" href="#">
             <img src="img/photo-1-mobile@1x.jpg" alt="Фото 1" width="280" height="280">
-          </a>
-          <div class="photo-item__description">
-            <h2 class="photo-item__title">Неродные просторы</h2>
-            <p class="photo-item__author">Автор фото:
-              <span>Борис</span>
-            </p>
-            <div class="like-counter">
-              <a class="like-counter__icon" href="#"></a>
-              <span class="like-counter__number">1350</span>
+            </a>
+            <div class="photo-item__description">
+              <div class="photo-item__header">
+                <h2 class="photo-item__title">Неродные просторы</h2>
+                <p class="photo-item__author">Автор фото:
+                  <span>Борис</span>
+                </p>
+              </div>
+              <div class="like-counter">
+                <a class="like-counter__icon" href="#"></a>
+                <span class="like-counter__number">1350</span>
+              </div>
+            </div>
+          </article>
+          <article class="photo-item">
+            <a class="photo-item__image" href="#">
+              <img src="img/photo-2-mobile@1x.jpg" alt="Logo" width="280" height="280">
+            </a>
+            <div class="photo-item__description">
+              <div class="photo-item__header">
+                <h2 class="photo-item__title">Неродные просторы</h2>
+                <p class="photo-item__author">Автор фото:
+                  <span>Сергей</span>
+                </p>
+              </div>
+              <div class="like-counter">
+                <a class="like-counter__icon" href="#"></a>
+                <span class="like-counter__number">143</span>
+              </div>
+            </div>
+          </article>
+          <article class="photo-item">
+            <a class="photo-item__image" href="#">
+              <img src="img/photo-3-mobile@1x.jpg" alt="Logo" width="280" height="280">
+            </a>
+            <div class="photo-item__description">
+              <div class="photo-item__header">
+                <h2 class="photo-item__title">Местная растительность</h2>
+                <p class="photo-item__author">Автор фото:
+                  <span>Петр</span>
+                </p>
+              </div>
+              <div class="like-counter">
+                <a class="like-counter__icon" href="#"></a>
+                <span class="like-counter__number">96</span>
+              </div>
+            </div>
+          </article>
+          <article class="photo-item">
+            <a class="photo-item__image" href="#">
+              <img  src="img/photo-4-mobile@1x.jpg" alt="Logo" width="280" height="280">
+            </a>
+            <div class="photo-item__description">
+              <div class="photo-item__header">
+                <h2 class="photo-item__title">Дорога на север</h2>
+                <p class="photo-item__author">Автор фото:
+                  <span>Антон</span>
+                </p>
+              </div>
+              <div class="like-counter">
+                <a class="like-counter__icon" href="#">
+                </a>
+                <span class="like-counter__number">254</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="video">
+        <div class="section-header">
+          <h1 class="section-header__title">Все еще сомневаетесь?</h1>
+          <p class="section-header__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали
+          в очередной раз!</p>
+        </div>
+        <div class="player">
+          <img class="player__image" src="img/video-mobile@1x.jpg" alt="Плеер">
+          <div class="progress player__progress-bar">
+            <div class="progress__scale">
+              <div class="progress__current"></div>
             </div>
           </div>
-        </article>
-        <article class="photo-item">
-          <a class="photo-item__image" href="#">
-            <img src="img/photo-2-mobile@1x.jpg" alt="Logo" width="280" height="280">
-          </a>
-          <div class="photo-item__description">
-            <h2 class="photo-item__title">Неродные просторы</h2>
-            <p class="photo-item__author">Автор фото:
-              <span>Сергей</span>
-            </p>
-            <div class="like-counter">
-              <a class="like-counter__icon" href="#"></a>
-              <span class="like-counter__number">143</span>
-            </div>
-          </div>
-        </article>
-        <article class="photo-item">
-          <a class="photo-item__image" href="#">
-            <img src="img/photo-3-mobile@1x.jpg" alt="Logo" width="280" height="280">
-          </a>
-          <div class="photo-item__description">
-            <h2 class="photo-item__title">Местная растительность</h2>
-            <p class="photo-item__author">Автор фото:
-              <span>Петр</span>
-            </p>
-            <div class="like-counter">
-              <a class="like-counter__icon" href="#"></a>
-              <span class="like-counter__number">96</span>
-            </div>
-          </div>
-        </article>
-        <article class="photo-item">
-          <a class="photo-item__image" href="#">
-            <img  src="img/photo-4-mobile@1x.jpg" alt="Logo" width="280" height="280">
-          </a>
-          <div class="photo-item__description">
-            <h2 class="photo-item__title">Дорога на север</h2>
-            <p class="photo-item__author">Автор фото:
-              <span>Антон</span>
-            </p>
-            <div class="like-counter">
-              <a class="like-counter__icon" href="#"></a>
-              <span class="like-counter__number">254</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-    <section class="video">
-      <div class="section-header">
-        <h1 class="section-header__title">Все еще сомневаетесь?</h1>
-        <p class="section-header__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали
-        в очередной раз!</p>
-      </div>
-      <div class="player">
-        <img class="player__image" src="img/video-mobile@1x.jpg" alt="Плеер">
-        <div class="progress player__progress-bar">
-          <div class="progress__scale">
-            <div class="progress__current"></div>
+          <div class="player-controls">
+            <button class="player-controls__replay"></button>
+            <button class="player-controls__ccs"></button>
+            <button class="player-controls__widescreen"></button>
           </div>
         </div>
-        <div class="player-controls">
-          <button class="player-controls__replay"></button>
-          <button class="player-controls__cс"></button>
-          <button class="player-controls__widescreen"></button>
-        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__hashtag">#visitsedona</div>
+      <div class="socials">
+        <a class="socials__icon socials__icon--twitter" href="#"></a>
+        <a class="socials__icon socials__icon--facebook" href="#"></a>
+        <a class="socials__icon socials__icon--youtube" href="#"></a>
       </div>
-    </section>
-  </main>
-  <footer class="main-footer">
-    <div class="hashtag">#visitsedona</div>
-    <div class="socials">
-      <a class="socials__icon socials__icon--twitter" href="#"></a>
-      <a class="socials__icon socials__icon--facebook" href="#"></a>
-      <a class="socials__icon socials__icon--youtube" href="#"></a>
-    </div>
-    <div class="copyright">
-      <span class="copyright__text">Разработано</span>
-      <a class="copyright__icon" href="#" ></a>
-    </div>
-  </footer>
+      <div class="main-footer__copyright">
+        <span class="main-footer__copyright-text">Разработано</span>
+        <a class="main-footer__copyright-icon" href="#" ></a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
