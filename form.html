@@ -26,9 +26,9 @@
       </ul>
       <div class="logo">
         <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg" width="189" height="96">
           <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-          <img src="img/logo-sedona-mobile.svg" alt="Logo" width="102" height="83">
+          <img src="img/logo-sedona-mobile.svg" alt="Logo">
         </picture>
       </div>
       <div class="main-header__inner">
@@ -36,7 +36,7 @@
       </div>
     </header>
     <main class="main-content">
-      <div class="main-content__promo">
+      <div class="main-content__promo main-content__promo--form">
         <img src="img/text-sedona.svg" alt="Промо">
       </div>
       <section class="feedback">
@@ -50,24 +50,27 @@
         <form class="feedback-form" action="/echo" method="post">
           <fieldset class="feedback-form__block">
             <h2 class="feedback-form__title">Представьтесь:</h2>
-            <div class="feedback-form__control">
-              <label class="feedback-form__label" for="name">Имя*:</label>
-              <input class="feedback-form__input" type="text" id="name" required placeholder="Иван">
-            </div>
-            <div class="feedback-form__control">
-              <label class="feedback-form__label" for="surname">Фамилия*:</label>
-              <input class="feedback-form__input" type="text" id="surname" required placeholder="Иванов">
-            </div>
-            <div class="feedback-form__control">
-              <label class="feedback-form__label" for="patronymic">Отчество:</label>
-              <input class="feedback-form__input" type="text" id="patronymic" placeholder="Иванович">
-            </div>
+              <div class="feedback-form__inner">
+                <div class="feedback-form__control">
+                  <label class="feedback-form__label" for="name">Имя*:</label>
+                  <input class="feedback-form__input feedback-form__input--longer" type="text" id="name" required placeholder="Иван">
+                </div>
+                <div class="feedback-form__control">
+                  <label class="feedback-form__label" for="surname">Фамилия*:</label>
+                  <input class="feedback-form__input" type="text" id="surname" required placeholder="Иванов">
+                </div>
+                <div class="feedback-form__control">
+                  <label class="feedback-form__label" for="patronymic">Отчество:</label>
+                  <input class="feedback-form__input" type="text" id="patronymic" placeholder="Иванович">
+                </div>
+              </div>
           </fieldset>
           <fieldset class="feedback-form__block">
             <h2 class="feedback-form__title">Контактная информация:</h2>
-            <div class="feedback-from__inner">
+            <div class="feedback-form__inner">
               <div class="feedback-form__control">
-                <label class="feedback-form__label" for="phone">Контактный телефон*:</label>
+                <!-- <label class="feedback-form__label" for="phone">Контактный телефон*:</label> -->
+                <label class="feedback-form__label feedback-form__label--hidden" for="phone">Телефон*:</label>
                 <div class="feedback-form__input-group">
                   <input class="feedback-form__input" type="tel" id="phone" required placeholder="Введите телефон">
                   <div class="feedback-form__input-addon"></div>
@@ -99,7 +102,7 @@
             </div>
           </fieldset>
           <fieldset class="feedback-form__block">
-            <h2 class="feedback-form__title">Посещенные достопримечательности:</h2>
+            <h2 class="feedback-form__title">Посещенные<br>достопримечательности:</h2>
             <div class="feedback-form__inner">
               <div class="feedback-form__control">
                 <input class="feedback-form__checkbox" type="checkbox" name="devil" id="devil" checked>
@@ -110,7 +113,7 @@
                 <label class="feedback-form__label" for="park">Слайд Парк</label>
               </div>
               <div class="feedback-form__control">
-                <input class="feedback-form__checkbox" type="checkbox" name="mount" id="mount">
+                <input class="feedback-form__checkbox" type="checkbox" name="mount" id="mount" checked>
                 <label class="feedback-form__label" for="mount">Гора Колокол</label>
               </div>
               <div class="feedback-form__control">

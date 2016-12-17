@@ -22,3 +22,27 @@ img {
     background-color: @body-bg-color;
   }
 }
+
+.side-line(@width) {
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: @width;
+    height: 1px;
+    background-color: #dbdbdb;
+    content: "";
+  }
+
+  &:after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: @width;
+    height: 1px;
+    background-color: #dbdbdb;
+    content: "";
+  }
+}
