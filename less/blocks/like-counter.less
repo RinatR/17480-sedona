@@ -1,11 +1,36 @@
+.like-counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .like-counter__number {
+  margin-left: 16px;
   font-size: @font-size-secondary;
   line-height: @line-height-secondary;
   font-weight: bold;
 }
 
+.like-counter__icon {
+  text-decoration: none;
+
+  svg {
+    fill: rgba(0,0,0,0.3);
+  }
+}
+
+
+
 @media @desktop-width {
   .like-counter__number {
     color: @text-color-white;
+
   }
+
+  .like-counter__icon {
+    svg {
+      fill: contrast(@text-color-main);
+    }
+  }
+
 }

@@ -5,7 +5,15 @@
 
   &--dark {
 
-    border-bottom: 1px solid #d6d6d6;
+    &:not(:last-of-type):after {
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      width: 280px;
+      height: 1px;
+      background-color: @bg-color-gray--darken;
+      content: "";
+    }
 
     .feature-item__content {
       background-color: @bg-color-gray;
@@ -18,6 +26,13 @@
     .feature-item__number,
     .feature-item__text {
       color: @text-color-secondary;
+    }
+
+    .feature-item__number {
+      &:after,
+      &:before {
+        background-color: #979797;
+      }
     }
   }
 }
@@ -37,7 +52,7 @@
 .feature-item__title {
   font-size: @font-size-main;
   line-height: @line-height-main;
-  font-style: bold;
+  font-weight: bold;
 }
 
 .feature-item__text {
@@ -45,22 +60,50 @@
   line-height: 21px;
 }
 
+.feature-item__number {
+  position: relative;
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    width: 9px;
+    height: 2px;
+    background-color: @bg-color-blue--lightest;
+    content: "";
+  }
+
+  &:after {
+    left: 30px;
+  }
+}
+
+.feature-item__image {
+  height: 260px;
+}
+
 @media @tablet-width {
   .feature-item {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    height: 256px;
 
     &--dark {
       .feature-item__content {
         padding: 50px;
       }
+
+      &:after {
+        display: none;
+      }
     }
-  }
 
-  .feature-item--reverse {
-
-    .feature-item__image {
-      order: -1;
+    &--reverse {
+      .feature-item__content {
+        order: 1;
+      }
     }
   }
 
@@ -70,20 +113,27 @@
     box-sizing: border-box;
     background-image: none;
   }
+
+  .feature-item__title {
+    font-size: @font-size-main--bigger;
+  }
+
+  .feature-item__number {
+    display: inline-block;
+    vertical-align: top;
+    margin: 16px 0;
+  }
+
+  .feature-item__image {
+    width: 512px;
+  }
 }
 
 @media @desktop-width {
   .feature-item {
     display: flex;
     flex-direction: row;
-
-    img {
-      width: 800px;
-    }
-
-    &--dark {
-
-    }
+    min-height: 256px;
   }
 
   .feature-item__content {
@@ -91,5 +141,10 @@
     padding: 0;
     box-sizing: border-box;
     background-image: none;
+  }
+
+  .feature-item__image {
+    width: 800px;
+    height: 260px;
   }
 }

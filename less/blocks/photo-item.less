@@ -21,6 +21,8 @@
 }
 
 .photo-item__description {
+  display: flex;
+  flex-direction: column;
   padding: 21px 0;
 }
 
@@ -40,7 +42,13 @@
     &:first-of-type {
       width: 100%;
       border: none;
+
+      .photo-item__image {
+        min-height: 400px;
+      }
     }
+
+
   }
 
   .photo-item__description {
@@ -50,6 +58,11 @@
     align-items: center;
     padding: 21px 20px;
     background-color: @body-bg-color;
+  }
+
+  .photo-item__image {
+    height: 267px;
+    text-decoration: none;
   }
 }
 
