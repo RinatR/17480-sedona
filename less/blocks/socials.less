@@ -17,7 +17,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    fill: white;
+    fill: @bg-color-main;
+  }
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+
+    svg {
+      fill: rgba(255,255,255,0.3);
+    }
   }
 
 }

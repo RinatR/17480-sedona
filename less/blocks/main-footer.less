@@ -25,6 +25,18 @@
 .main-footer__copyright-icon {
   display: inline-block;
   vertical-align: middle;
+
+  &:hover {
+    svg {
+      fill: @bg-color-blue;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: #b2b2b2;
+    }
+  }
 }
 
 @media @tablet-width {

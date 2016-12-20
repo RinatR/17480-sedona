@@ -5,10 +5,20 @@
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: @line-height-main;
+  font-weight: bold;
   color: @text-color-white;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   background-color: @bg-color-blue;
   box-sizing: border-box;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: rgba(255,255,255,0.3);
+  }
 }

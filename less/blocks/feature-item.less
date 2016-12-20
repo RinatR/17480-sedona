@@ -133,18 +133,24 @@
   .feature-item {
     display: flex;
     flex-direction: row;
-    min-height: 256px;
+    height: 256px;
+
+    &--dark {
+      .feature-item__content {
+        padding: 50px 70px;
+      }
+    }
   }
 
   .feature-item__content {
     width: 400px;
-    padding: 0;
+    padding: 0 67px;
+    padding-top: 53px;
     box-sizing: border-box;
     background-image: none;
   }
 
   .feature-item__image {
-    width: 800px;
-    height: 260px;
+    width: auto;
   }
 }

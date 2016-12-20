@@ -32,6 +32,15 @@
   text-decoration: none;
   text-transform: uppercase;
   background-color: @bg-color-blue;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: rgba(255,255,255,0.3);
+  }
 }
 
 @media @tablet-width {
@@ -62,5 +71,14 @@
     line-height: @line-height-main;
     background-color: @bg-color-main;
     color: @text-color-main;
+
+    &:hover {
+      color: @bg-color-blue;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: rgba(0,0,0, 0.3);
+    }
   }
 }
