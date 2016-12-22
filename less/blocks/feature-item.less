@@ -11,11 +11,13 @@
       left: 20px;
       width: 280px;
       height: 1px;
-      background-color: @bg-color-gray--darken;
+      background-color: #d6d6d6;
       content: "";
     }
 
     .feature-item__content {
+      padding-top: 26px;
+      padding-bottom: 29px;
       background-color: @bg-color-gray;
     }
 
@@ -39,10 +41,11 @@
 
 .feature-item__content {
   padding: 43px 20px;
+  padding-bottom: 35px;
   background-color: @bg-color-blue;
 
   &--first {
-    padding-top: 80px;
+    padding-top: 77px;
     background-image: url("../img/bg-triangle.svg");
     background-repeat: no-repeat;
     background-position: top center;
@@ -50,6 +53,7 @@
 }
 
 .feature-item__title {
+  margin-bottom: 7px;
   font-size: @font-size-main;
   line-height: @line-height-main;
   font-weight: bold;
@@ -57,11 +61,16 @@
 
 .feature-item__text {
   font-size: @font-size-secondary;
-  line-height: 21px;
+  line-height: @line-height-secondary;
 }
 
 .feature-item__number {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 10px;
   position: relative;
+  font-size: @font-size-secondary;
+  line-height: @line-height-secondary;
 
   &:before,
   &:after {
@@ -92,7 +101,9 @@
 
     &--dark {
       .feature-item__content {
-        padding: 50px;
+        padding: 48px;
+        padding-bottom: 0;
+        padding-top: 45px;
       }
 
       &:after {
@@ -109,7 +120,9 @@
 
   .feature-item__content {
     width: 256px;
-    padding: 38px 47px;
+    padding: 0 45px;
+    padding-top: 46px;
+    padding-bottom: 49px;
     box-sizing: border-box;
     background-image: none;
   }
@@ -121,7 +134,7 @@
   .feature-item__number {
     display: inline-block;
     vertical-align: top;
-    margin: 16px 0;
+    margin-bottom: 17px;
   }
 
   .feature-item__image {
@@ -137,7 +150,19 @@
 
     &--dark {
       .feature-item__content {
-        padding: 50px 70px;
+        padding: 45px 70px;
+      }
+    }
+
+    &--reverse {
+      .feature-item__title {
+        margin-right: 35px;
+        margin-left: 35px;
+      }
+
+      .feature-item__content {
+        padding-right: 90px;
+        padding-left: 90px;
       }
     }
   }
@@ -148,6 +173,11 @@
     padding-top: 53px;
     box-sizing: border-box;
     background-image: none;
+  }
+
+  .feature-item__title {
+    margin-right: 50px;
+    margin-left: 50px;
   }
 
   .feature-item__image {
