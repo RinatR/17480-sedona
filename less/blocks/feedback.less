@@ -11,6 +11,7 @@
 }
 
 .feedback__popup {
+  display: none;
   width: 320px;
   text-align: center;
   background-color: @bg-color-main;
@@ -79,6 +80,7 @@
     .feedback__popup-title {
       margin-bottom: 28px;
       font-size: @font-size-main--biggest;
+      line-height: 1.2;
     }
 
     .feedback__popup-text {
@@ -94,15 +96,27 @@
       width: 100%;
 
       .feedback__popup-content {
-        padding-top: 64px;
+        padding-top: 56px;
+        padding-bottom: 34px;
       }
 
       .feedback__popup-footer {
-        padding: 43px 0;
+        padding: 44px 0;
       }
 
       .feedback__popup-btn {
         width: 460px;
+      }
+    }
+
+    &--error {
+      width: 400px;
+      padding-top: 67px;
+      padding-bottom: 49px;
+
+      .feedback__popup-title {
+        margin-left: 20px;
+        margin-right: 20px;
       }
     }
   }
@@ -113,5 +127,15 @@
     .container("desktop");
     padding: 0;
     margin-bottom: 66px;
+
+    .section-header {
+      margin-bottom: 30px;
+    }
+  }
+
+  .feedback__popup {
+    &--success {
+      width: 640px;
+    }
   }
 }

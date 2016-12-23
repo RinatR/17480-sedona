@@ -409,12 +409,27 @@
       }
 
       .feedback-form__control {
-        width: 324px;
+        width: 220px;
         margin-bottom: 32px;
+
+        &:nth-of-type(2),
+        &:first-of-type {
+          margin-left: 95px;
+        }
+
+        &:nth-of-type(3) {
+          order: 1;
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(4) {
+          order: 2;
+          margin-bottom: 0;
+        }
 
         &:nth-of-type(3),
         &:nth-of-type(4) {
-          margin-bottom: 0;
+          margin-left: 40px;
         }
       }
     }
@@ -494,9 +509,14 @@
       display: flex;
       flex-direction: column;
 
+      .feedback-form__title {
+        margin-bottom: 70px;
+      }
+
       .feedback-form__inner {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
       }
 
       .feedback-form__control {
@@ -504,7 +524,7 @@
         justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
-        width: 470px;
+        width: 480px;
 
         &:first-of-type {
           margin-bottom: 0;
@@ -514,6 +534,7 @@
       .feedback-form__label {
         align-self: center;
         margin: 0;
+        margin-right: 16px;
 
 
         & + .feedback-form__label {
@@ -526,12 +547,12 @@
       }
 
       .feedback-form__input-group {
-        width: 300px;
+        width: 315px;
         align-self: center;
       }
 
       .feedback-form__input {
-        width: 250px;
+        width: 257px;
       }
 
       .feedback-form__error-message {
@@ -549,9 +570,22 @@
       }
 
       .feedback-form__control {
-        justify-content: flex-end;
-        width: 215px;
+        justify-content: space-between;
+        width: 240px;
         margin-bottom: 0;
+
+        &:first-of-type,
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+          margin-left: 0;
+        }
+      }
+
+      .feedback-form__label {
+        &:before {
+          left: 0;
+        }
       }
     }
 
