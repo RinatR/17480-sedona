@@ -6,14 +6,33 @@
 }
 
 .main-footer__hashtag {
-  margin-bottom: 23px;
-  font-size: 21px;
+  margin-bottom: 35px;
+  font-size: @font-size-main--bigger;
   line-height: @line-height-main;
   font-weight: bold;
 }
 
-.main-footer__copyright {
-  margin-bottom: 23px;
+.main-footer__copyright-text {
+  margin-right: 11px;
+  font-size: @font-size-secondary;
+  line-height: @line-height-main;
+}
+
+.main-footer__copyright-icon {
+  display: inline-block;
+  vertical-align: middle;
+
+  &:hover {
+    svg {
+      fill: @bg-color-blue;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: #b2b2b2;
+    }
+  }
 }
 
 @media @tablet-width {
@@ -28,8 +47,4 @@
   .main-footer__copyright {
     margin-bottom: 0;
   }
-}
-
-@media @desktop-width {
-
 }

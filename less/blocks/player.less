@@ -1,28 +1,79 @@
 .player {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.player__progress-bar {
+.player__controls {
   position: absolute;
-  top: 157px;
+  bottom: -52px;
   left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
   width: 280px;
-  padding: 22px;
-  background-color: rgba(0,0,0,0.6);
+  padding: 20px;
+  padding-top: 30px;
+  min-height: 112px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6) 50%, @bg-color-gray 50%);
   box-sizing: border-box;
-  transform: translateX(-50%);
 }
 
-.progress__scale {
+.player__controls-item {
+  min-height: 20px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  &--replay {
+    margin-right: auto;
+    cursor: pointer;
+  }
+
+  &--fullscreen {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+
+  &--progress-bar {
+    position: relative;
+    width: 300px;
+  }
+
+  svg {
+    display: inline-block;
+    vertical-align: top;
+    fill: #5c6870;
+  }
+
+  &:hover {
+    svg {
+      fill: #333333;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: #c1c1c1;
+    }
+  }
+}
+
+.player__scale {
   position: absolute;
-  top: 22px;
-  left: 22px;
-  right: 22px;
+  top: 50%;
+  left: 0px;
+  right: 0px;
   height: 3px;
-  background-color: rgba(109,96,85,0.6);
+  background-color: rgba(109,96,85,0.8);
 }
 
-.progress__current {
+.player__current {
   position: absolute;
   top: -3px;
   left: 36px;
@@ -30,10 +81,67 @@
   height: 9px;
   background-color: @bg-color-main;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 @media @tablet-width {
-  .player__progress-bar {
+  .player__controls {
+    bottom: 4px;
+    align-items: center;
+    align-content: center;
     width: 648px;
+    padding: 0 40px;
+    min-height: 94px;
+    background: rgba(0,0,0,0.6);
+  }
+
+  .player__controls-item {
+    &--replay {
+      order: -1;
+      margin-right: auto;
+    }
+
+    &--progress-bar {
+      width: 389px;
+    }
+
+    &--subtitles {
+      margin-left: auto;
+      margin-right: 30px;
+    }
+
+    &--fullscreen {
+      margin-left: 0;
+    }
+
+    svg {
+      fill: @bg-color-main;
+    }
+
+    &:hover,
+    &:active {
+      svg {
+        fill: @bg-color-main;
+      }
+    }
+  }
+
+  .player__current {
+    left: 110px;
+  }
+}
+
+@media @desktop-width {
+  .player__controls {
+    width: 800px;
+    padding: 0 35px;
+    padding-right: 42px;
+    box-sizing: border-box;
+  }
+
+  .player__controls-item {
+    &--progress-bar {
+      width: 540px;
+    }
   }
 }

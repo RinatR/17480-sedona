@@ -1,3 +1,53 @@
 .map {
   padding-top: 49px;
 }
+
+.map__image {
+  position: relative;
+  height: 350px;
+  background-image: url("../img/bg-map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+  }
+}
+
+@media @tablet-width {
+
+  .map {
+    padding-top: 59px;
+  }
+
+  .map__image {
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+    }
+  }
+}
+
+@media @desktop-width {
+
+  .map {
+    padding-top: 66px;
+  }
+
+  .map__image {
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+    }
+  }
+}

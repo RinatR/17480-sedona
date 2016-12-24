@@ -1,48 +1,124 @@
 .feedback {
-  margin-bottom: 78px;
+  margin-bottom: 42px;
 
   .section-header {
-    margin-bottom: 22px;
+    margin-bottom: 17px;
+  }
+
+  .section-header__title {
+    margin-bottom: 25px;
   }
 }
 
 .feedback__popup {
   display: none;
-  width: 400px;
-  padding: 61px;
+  width: 320px;
   text-align: center;
   background-color: @bg-color-main;
   border: 1px solid;
   box-sizing: border-box;
 
-  &--success {
-    width: 100%;
-    padding: 0;
+  .feedback__popup-title {
+    margin-bottom: 28px;
+    font-size: @font-size-main;
+    line-height: @line-height-main;
+  }
 
+  .feedback__popup-text {
+    font-size: @font-size-secondary;
+    line-height: @line-height-secondary;
+  }
+
+  .feedback__popup-btn {
+    font-size: @font-size-main;
+  }
+
+  &--success {
     .feedback__popup-content {
-      padding: 64px 112px;
+      padding: 36px 40px;
     }
 
     .feedback__popup-footer {
-      padding: 44px 91px;
+      padding: 20px;
       background-color: @body-bg-color
+    }
+  }
+
+  &--error {
+    padding: 30px 50px;
+    padding-top: 40px;
+
+    .feedback__popup-btn {
+      width: 180px;
     }
 
     .feedback__popup-text {
-      margin-bottom: 0;
+      margin-bottom: 24px;
     }
   }
-}
-
-.feedback__popup-title,
-.feedback__popup-text {
-  margin-bottom: 39px;
 }
 
 @media @tablet-width {
   .feedback {
     .container("tablet");
     margin: 0;
+    margin-bottom: 61px;
+
+    .section-header {
+      width: 445px;
+      margin: 0 auto;
+      margin-bottom: 45px;
+    }
+
+    .section-header__title {
+      margin-bottom: 30px;
+      font-size: @font-size-main--biggest;
+    }
+  }
+
+  .feedback__popup {
+    .feedback__popup-title {
+      margin-bottom: 28px;
+      font-size: @font-size-main--biggest;
+      line-height: 1.2;
+    }
+
+    .feedback__popup-text {
+      font-size: @font-size-secondary;
+      line-height: @line-height-secondary;
+    }
+
+    .feedback__popup-btn {
+      font-size: @font-size-main--bigger;
+    }
+
+    &--success {
+      width: 100%;
+
+      .feedback__popup-content {
+        padding-top: 56px;
+        padding-bottom: 34px;
+      }
+
+      .feedback__popup-footer {
+        padding: 44px 0;
+      }
+
+      .feedback__popup-btn {
+        width: 460px;
+      }
+    }
+
+    &--error {
+      width: 400px;
+      padding-top: 67px;
+      padding-bottom: 49px;
+
+      .feedback__popup-title {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
   }
 }
 
@@ -50,5 +126,16 @@
   .feedback {
     .container("desktop");
     padding: 0;
+    margin-bottom: 66px;
+
+    .section-header {
+      margin-bottom: 30px;
+    }
+  }
+
+  .feedback__popup {
+    &--success {
+      width: 640px;
+    }
   }
 }

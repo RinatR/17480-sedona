@@ -6,20 +6,56 @@
   position: relative;
   min-height: 56px;
   background-color: @bg-color-main;
+
+  &--closed {
+    .main-header__toggle {
+      position: absolute;
+      top: 17px;
+      right: 20px;
+      display: block;
+      width: 23px;
+      height: 4px;
+      background-color: @bg-color-blue;
+      text-decoration: none;
+      box-shadow: 0 8px 0 @bg-color-blue,
+                  0 16px 0 @bg-color-blue;
+      outline:none;
+      border: none;
+    }
+  }
+
+  &--opened {
+    .main-header__toggle {
+      position: absolute;
+      top: -184px;
+      right: 40px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      z-index: 2;
+
+      &:before {
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        transform: rotate(45deg);
+        background-color: @bg-color-main;
+        content: "";
+      }
+
+      &:after {
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        transform: rotate(-45deg);
+        background-color: @bg-color-main;
+        content: "";
+      }
+    }
+  }
 }
 
-.main-header__toggle {
-  position: absolute;
-  top: 17px;
-  right: 20px;
-  display: block;
-  width: 23px;
-  height: 4px;
-  background-color: @bg-color-blue;
-  text-decoration: none;
-  box-shadow: 0 8px 0 @bg-color-blue,
-              0 16px 0 @bg-color-blue;
-}
+
 
 @media @tablet-width {
 

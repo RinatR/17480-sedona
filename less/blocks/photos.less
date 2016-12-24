@@ -1,8 +1,12 @@
 .photos {
-  margin-bottom: 39px;
+  margin-bottom: 33px;
 
   .section-header {
-    margin-bottom: 33px;
+    margin-bottom: 27px;
+  }
+
+  .section-header__title {
+    margin-bottom: 25px;
   }
 }
 
@@ -11,12 +15,27 @@
   .photos {
     .container("tablet");
     margin-bottom: 69px;
+
+    .section-header {
+      margin: 0 105px;
+      margin-bottom: 65px;
+    }
+
+    .section-header__title {
+      margin-bottom: 30px;
+      font-size: @font-size-main--biggest;
+    }
+
+    .section-header__text {
+      line-height: @line-height-secondary;
+    }
   }
 
   .photos__wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 68px;
   }
 }
 
@@ -24,11 +43,18 @@
   .photos {
     .container();
     padding: 0;
+
+    .section-header {
+      width: 430px;
+      margin: 0 auto;
+      margin-bottom: 70px;
+    }
   }
 
   .photos__wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 72px;
   }
 }
