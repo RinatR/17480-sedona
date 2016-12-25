@@ -13,7 +13,7 @@
 }
 
 .main-footer__copyright-text {
-  margin-right: 11px;
+  margin-right: 10px;
   font-size: @font-size-secondary;
   line-height: @line-height-main;
 }
@@ -46,5 +46,24 @@
   .main-footer__hashtag,
   .main-footer__copyright {
     margin-bottom: 0;
+  }
+
+  .main-footer__copyright {
+    margin-left: 10px;
+  }
+
+  .main-footer__hashtag {
+    margin-left: 5px;
+  }
+}
+
+@media @desktop-width {
+  .main-footer {
+    justify-content: flex-end;
+  }
+
+  .main-footer__copyright {
+    margin-right: 42px;
+    margin-left: 351px;
   }
 }

@@ -1,6 +1,7 @@
 .logo {
   position: absolute;
   left: 50%;
+  bottom: -33px;
   transform: translateX(-50%);
   z-index: 2;
 }
@@ -9,5 +10,14 @@
 
   .logo {
     top: 0;
+  }
+}
+
+@media @desktop-width {
+  .logo {
+    img {
+      width: 189px;
+      height: 96px;
+    }
   }
 }
