@@ -4,15 +4,22 @@
 
   &--closed {
     .main-menu__toggle {
-      bottom: 35px;
+      bottom: 15px;
       right: 20px;
       display: block;
-      width: 23px;
-      height: 4px;
-      background-color: @bg-color-blue;
-      text-decoration: none;
-      box-shadow: 0 8px 0 @bg-color-blue,
-                  0 16px 0 @bg-color-blue;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 23px;
+        height: 4px;
+        background-color: @bg-color-blue;
+        text-decoration: none;
+        box-shadow: 0 8px 0 @bg-color-blue,
+                    0 16px 0 @bg-color-blue;
+        content: "";
+      }
     }
 
     .main-menu__list {
@@ -23,15 +30,18 @@
   &--opened {
     .main-menu__toggle {
       position: absolute;
-      top: 22px;
-      right: 43px;
+      top: 10px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
       background-color: transparent;
       border: none;
       outline: none;
-      z-index: 2;
 
       &:before {
         position: absolute;
+        left: 0;
+        top: 50%;
         width: 30px;
         height: 5px;
         transform: rotate(45deg);
@@ -41,6 +51,8 @@
 
       &:after {
         position: absolute;
+        left: 0;
+        top: 50%;
         width: 30px;
         height: 5px;
         transform: rotate(-45deg);
@@ -66,9 +78,12 @@
 
 .main-menu__toggle {
   position: absolute;
+  width: 20px;
+  height: 20px;
   outline:none;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .main-menu__item {
