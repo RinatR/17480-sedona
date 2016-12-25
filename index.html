@@ -9,30 +9,30 @@
   <body>
     <div class="page-wrapper">
       <header class="main-header">
-        <ul class="main-menu">
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="index.html">Главная</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="photo.html">Фото и видео</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="form.html">Форма отзыва</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="http://www.htmlacademy.ru">Html academy</a>
-          </li>
-        </ul>
+        <nav class="main-menu main-menu--opened">
+          <ul class="main-menu__list">
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="photo.html">Фото и видео</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="http://www.htmlacademy.ru">Html academy</a>
+            </li>
+          </ul>
+          <button class="main-menu__toggle" type="button" id="toggle"></button>
+        </nav>
         <a class="logo" href="index.html">
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg" >
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-            <img src="img/logo-sedona-mobile.svg" alt="Logo">
+            <img src="img/logo-sedona-mobile.svg" alt="Logo" width="102" height="83">
           </picture>
         </a>
-        <div class="main-header__inner main-header__inner--opened">
-          <button class="main-header__toggle" type="button" id="toggle"></button>
-        </div>
       </header>
       <main class="main-content">
         <div class="main-content__promo">
@@ -124,7 +124,7 @@
           <a class="btn booking__btn" href="#">Найти гостиницу</a>
           <div class="map">
             <div class="map__image">
-              <svg width="27" height="27"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-map-marker"></use></svg>
+              <iframe width="320" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJDbBC-TKhLYcR_Y5s-iPFSFU&zoom=8&center=34.8697%2C-111.7610&key=AIzaSyD1boBpuAkaogzHDhIWRaM1ZUOvpvyA-54" allowfullscreen></iframe>
             </div>
           </div>
         </section>
@@ -196,5 +196,6 @@
         </g>
       </symbol>
     </svg>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

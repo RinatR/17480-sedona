@@ -89,7 +89,7 @@
 }
 
 .feature-item__image {
-  height: 260px;
+  height: 256px;
 }
 
 @media @tablet-width {
@@ -120,7 +120,7 @@
 
   .feature-item__content {
     width: 256px;
-    padding: 0 45px;
+    padding: 0 40px;
     padding-top: 46px;
     padding-bottom: 49px;
     box-sizing: border-box;
@@ -163,6 +163,12 @@
       .feature-item__content {
         padding-right: 90px;
         padding-left: 90px;
+      }
+    }
+
+    &:first-of-type {
+      .feature-item__image {
+        overflow: hidden;
       }
     }
   }
