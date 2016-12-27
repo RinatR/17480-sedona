@@ -7,7 +7,7 @@
 
 .player__controls {
   position: absolute;
-  bottom: -52px;
+  bottom: -63px;
   left: 50%;
   transform: translate(-50%);
   display: flex;
@@ -16,10 +16,11 @@
   justify-content: flex-start;
   align-content: space-between;
   width: 280px;
-  padding: 20px;
-  padding-top: 30px;
+  padding: 20px 23px;
+  padding-top: 13px;
+  padding-bottom: 22px;
   min-height: 112px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.6) 50%, @bg-color-gray 50%);
+  background: linear-gradient(rgba(0,0,0,0.6) 0px, rgba(0,0,0,0.6) 45px, @bg-color-gray 45px, @bg-color-gray 112px);
   box-sizing: border-box;
 }
 
@@ -36,7 +37,7 @@
   }
 
   &--fullscreen {
-    margin-left: 20px;
+    margin-left: 31px;
     cursor: pointer;
   }
 
@@ -47,7 +48,7 @@
 
   svg {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: bottom;
     fill: #5c6870;
   }
 
